@@ -44,4 +44,7 @@ included.
     - uses pyspark to extract json data from MongoDB Collenction into dataframe
     **transform**
     - flatten nested (journal_entries.lines) in separate rows
+    - Calculates total debit and credit per journal entry.
+    - create partition column month and year from entry_date
+    
     
