@@ -27,7 +27,7 @@ included.
   
 ## 4. Project Structure (high level)
  |--SourceData /Sample Jsons: account,journal_entries, close_tasks
- |--Sciprts/
+ ├──Sciprts/
  | |--Ingest.py
  | |--Transform.py
  | |--Iceberg_table.ddl
