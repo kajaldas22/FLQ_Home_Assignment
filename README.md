@@ -26,21 +26,18 @@ included.
 
   
 ## 4. Project Structure (high level)
- project-root/
-    |--- SourceData/
-    |   |--accounts.json
-    
-   ├── SourceData/
-   │   ├── accounts.json
-   │   ├── journal_entries.json
-   │   ├── close_tasks.json
-   ├── Scripts/
-   │   ├── ingest.py
-   │   ├── transform.py
-   │   ├── iceberg_table.ddl
-   ├── tests/
-   │   ├── test_etl_pipeline.py
-   └── README.md
+    project-root
+    SourceData/
+       --accounts.json
+       --journal_entries.json
+       --close_tasks.json
+   Scripts/
+       --ingest.py
+       --transform.py
+       --iceberg_table.ddl
+    tests/
+       --test_etl_pipeline.py
+   README.md
   
 
 ## 5. Approach
