@@ -40,4 +40,8 @@ included.
     README.md  
 
 ## 5. Approach
+    **extract**
+    - uses pyspark to extract json data from MongoDB Collenction into dataframe
+    **transform**
+    - flatten nested (journal_entries.lines) in separate rows
     
