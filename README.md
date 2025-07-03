@@ -35,14 +35,9 @@ included.
        --ingest.py
        --transform.py
        --iceberg_table.ddl
-   Scripts/
-       --ingest.py
-       --transform.py
-       --iceberg_table.ddl
     tests/
        --test_etl_pipeline.py
-   README.md
-  
+    README.md  
 
 ## 5. Approach
     
