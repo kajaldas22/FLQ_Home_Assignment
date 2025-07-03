@@ -27,6 +27,9 @@ included.
   
 ## 4. Project Structure (high level)
  project-root/
+    |--- SourceData/
+    |   |--accounts.json
+    
    ├── SourceData/
    │   ├── accounts.json
    │   ├── journal_entries.json
