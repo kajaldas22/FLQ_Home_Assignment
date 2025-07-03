@@ -31,6 +31,10 @@ included.
        --accounts.json
        --journal_entries.json
        --close_tasks.json
+    Scripts/
+       --ingest.py
+       --transform.py
+       --iceberg_table.ddl
    Scripts/
        --ingest.py
        --transform.py
