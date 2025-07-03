@@ -41,10 +41,31 @@ included.
 
 ## 5. Approach
     **extract**
-    - uses pyspark to extract json data from MongoDB Collenction into dataframe
+     - uses pyspark to extract json data from MongoDB Collenction into dataframe
     **transform**
-    - flatten nested (journal_entries.lines) in separate rows
-    - Calculates total debit and credit per journal entry.
-    - create partition column month and year from entry_date
+     - flatten nested (journal_entries.lines) in separate rows
+     - Calculates total debit and credit per journal entry.
+     - create partition column year  and month from entry_date
+    **Load**
+     - Write to S3 in Iceberg format, partition by year and month
+     - CDC update using Merge Into 
+      
+     
+## 6. Iceberg Optimization
+   - partitioniong - include ddl 
+   - compaction - example 'call 'data file'
+   - retention - example
+# 7. Querty Enginee recommendation 
+   - open source Trino,
+   - Spark SQL
+   - Snowflake : Iceberg as external table
+ # 8. Alternative design (snowflake)
+
+ # 9. Testing
+
+ # 10. Improvment 
+
+ # 10. Summary
+ 
     
     
