@@ -14,7 +14,7 @@ from pymongo import MongoClient
 from pyspark.sql.functions import col, explode, to_date,year, month,sum   
 
 
-if __name__=="__main__":
+def main():
 
     #Start Spark session
     spark=SparkSession.builder \
@@ -87,3 +87,5 @@ if __name__=="__main__":
      '''
     
  
+if __name__=="__main__":
+    main()
