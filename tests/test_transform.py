@@ -2,15 +2,13 @@
 Unit test for transform.py
 check number of rows in transformed DataFrame
 parittin column extraction
-# and aggregation of debit and credit
+and aggregation of debit and credit
 
 '''
 
 import pytest 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, explode
-
-
 
 @pytest.fixture(scope="module")
 
@@ -41,4 +39,4 @@ def test_close_account_schema(spark):
         ]
     
     df=spark.createDataFrame(data)
-    assert "account"in df.columns
+    assert "account_id"in df.columns
