@@ -22,7 +22,6 @@ This project simulates a real-world scenario for an accounting SaaS platform tha
    - Simple unit tests stubs will be included to show how the extract and transform steps could be validated.
    - In addition to the PySpark approach,  alternative design using Snowflake VARIANT for JSON flattening and querying Iceberg tables from Snowflake will also be
 included.
-
   
 ## Project Structure (high level)
     project-root
@@ -31,7 +30,7 @@ included.
        --journal_entries.json
        --close_tasks.json
     Scripts/
-       --write_collection_mongodb.py
+       --write_collection_mongodb.py  (additonal scripts for write data into  local Mongodb)
        --extract_collection.py
        --transform.py
        --iceberg_optimization.sql
@@ -65,19 +64,23 @@ included.
 ## Alternative design (snowflake)
   - Raw JSON in s3 and staged into a snowflake VARIANT table
   - Flattening using 'LATERAL FLATTEN' SQL in Snowflake
-  - Transformed data written back to S3 in Parquet format and registeed as external Iceberg table. 
+  - Transformed data is written back to S3 in Parquet format and registeed as an external Iceberg table for cross-engine querying.
 
 ## Testing
-   - Basic unit test stubs included (PyTest) for verifying that the extract and transform steps run as expected.
+   - Basic unit test stubs included (PyTest) for verifying that the  transform steps run as expected.
    - test cover JSON flattening, schema verification.
 
 ## Improvment 
    - Add CI/CD workflow using Github action 
    - linting for code quality
-   - try/catch
+   - better error handling with try/catch and logging
 ## Reference: 
-   https://www.practical-mongodb-aggregations.com/examples/foundational/unpack-array-group-differently.html   
+   Example Mongo aggregation logic
+    https://www.practical-mongodb-aggregations.com/examples/foundational/unpack-array-group-differently.html   
 
+## Notes 
+  - Local MongoDB and Spark were installed to run spot checkes and validate extract and transform scripts
+  - Additional write step('write_collection_mongodb.py) included to load sample JSON.
  
     
     
